@@ -3,15 +3,19 @@
 # Part 1
 
 def sum(arr)
-  0
+  arr.sum
 end
 
 def max_2_sum(arr)
-  # YOUR CODE HERE
+    return 0 if arr.empty?
+     return arr[0] if arr.length == 1
+
+     arr.sort.last(2).sum
 end
 
 def sum_to_n?(arr, number)
-  # YOUR CODE HERE
+    return false if arr.length < 2
+    arr.combination(2).any? { |a, b| a + b == number }
 end
 
 # Part 2
