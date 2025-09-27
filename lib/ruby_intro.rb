@@ -29,7 +29,9 @@ def starts_with_consonant?(string)
 end
 
 def binary_multiple_of_4?(string)
-  # YOUR CODE HERE
+    return false if string.empty? || string.match?(/[^01]/)
+    return true if string == '0'
+    string.end_with?('00')
 end
 
 # Part 3
