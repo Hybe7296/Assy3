@@ -48,4 +48,8 @@ class BookInStock
       @isbn = isbn
       @price = price
       end
+    def price_as_string
+        # format('%.2f', var) formats a float to two decimal places
+        format('$%.2f', @price)
+      end
 end
