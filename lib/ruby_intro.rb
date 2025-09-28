@@ -38,5 +38,14 @@ end
 
 # Object representing a book
 class BookInStock
-  # YOUR CODE HERE
+    attr_accessor :isbn, :price
+    
+    def initialize(isbn, price)
+    # Raise an ArgumentError if validation fails
+      raise ArgumentError, 'ISBN cannot be empty' if isbn.empty?
+      raise ArgumentError, 'Price must be greater than zero' if price <= 0
+
+      @isbn = isbn
+      @price = price
+      end
 end
